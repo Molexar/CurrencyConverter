@@ -8,6 +8,7 @@ import (
 	"strconv"
 	"sync"
 	"time"
+	"expvar"
 )
 
 const (
@@ -34,6 +35,8 @@ type Server struct {
 
 	mutex    *sync.Mutex        // Мьютекс для синхронизации
 	webhooks map[string]webhook // вебхуки
+
+	currencyHits    *expvar.Int
 
 }
 

@@ -30,3 +30,5 @@ func (s *Server) createResponse(base string) (r *currencyResponse, err error) {
 
 	return &response, nil
 }
+
+func (s *Server) createConvertResponse()
